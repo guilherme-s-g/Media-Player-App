@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_200"
+    tools:context=".MainActivity">
+
+    <SeekBar
+        android:id="@+id/seekBarVolume"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/play"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="executarSom"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPause"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarVolume"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/pause"
+        android:onClick="pausarMusica"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toStartOf="@+id/buttonStop"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonPlay"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarVolume"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/stop"
+        android:onClick="pararMusica"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonPause"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarVolume"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
